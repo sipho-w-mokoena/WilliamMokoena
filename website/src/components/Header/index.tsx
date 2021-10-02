@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import { useState } from "react"
 
 import classNames from "Lib/utils/classNames"
 
@@ -19,6 +20,9 @@ interface I_Tabs {
 }
 
 function Tabs(props: { tabs: I_Tabs[] }) {
+  const [activeTabIndex, setActiveTabIndex] = useState(0)
+  const tabs = props.tabs
+
   return (
     <div
       className={classNames(
@@ -28,38 +32,44 @@ function Tabs(props: { tabs: I_Tabs[] }) {
         "rounded-sm md:rounded-none"
       )}
     >
-      <Tab.Group
-        manual
-        onChange={index => {
-          console.log("Changed selected tab to:", index)
-        }}
-      >
+      <Tab.Group manual defaultIndex={activeTabIndex}>
         <Tab.List
           className={classNames(
-            "flex flex-col md:flex-row \
-                            gap-2 md:gap-5 lg:gap-20 \
-                            justify-start md:justify-evenly"
+            "flex flex-col md:flex-row",
+            "gap-2 md:gap-5 lg:gap-20",
+            "justify-start md:justify-evenly"
           )}
         >
-          {props.tabs.map((tab, key) => (
+          {tabs.map((tab, key) => (
             <Tab
               key={key}
               className={({ selected }) =>
                 classNames(
-                  "text-left p-1 h-full \
-                                    hover:text-green-400 \
-                                    focus:text-green-600",
+                  "text-left p-1 h-full",
+                  "hover:text-green-400",
+                  "focus:text-green-600",
                   "uppercase font-medium",
                   "rounded-md",
-                  "focus:outline-none \
-                                    focus:ring-1 ring-offset-2 \
-                                    ring-offset-green-400 \
-                                    ring-green-400",
+                  "focus:outline-none",
+                  "focus:ring-1 ring-offset-2",
+                  "ring-offset-green-400",
+                  "ring-green-400",
                   selected ? "text-green-600" : "hover:text-green-400"
                 )
               }
             >
-              <Link to={tab.route}>{tab.category}</Link>
+              <Link
+                {...props}
+                getProps={props => {
+                  if (props.isCurrent) {
+                    setActiveTabIndex(key)
+                  }
+                  return {}
+                }}
+                to={tab.route}
+              >
+                {tab.category}
+              </Link>
             </Tab>
           ))}
         </Tab.List>
@@ -88,9 +98,9 @@ export default function Header() {
             "md:hidden rounded-md p-1",
             "text-gray-600",
             "hover:text-green-400",
-            "focus:text-green-60 \
-                        focus:outline-none \
-                        focus:ring-1 ring-offset-2 ring-offset-green-400 ring-green-400"
+            "focus:text-green-60",
+            "focus:outline-none",
+            "focus:ring-1 ring-offset-2 ring-offset-green-400 ring-green-400"
           )}
         >
           <FontAwesomeIcon icon={faBars} />

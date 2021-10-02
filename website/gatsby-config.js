@@ -50,5 +50,13 @@ module.exports = {
         extensions: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `skyblue`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
   ],
 }

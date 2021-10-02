@@ -1,7 +1,5 @@
 import HomePage from "Pages/home"
 
-const IndexPage = () => (
-  <HomePage />
-)
+const IndexPage = () => <HomePage />
 
 export default IndexPage
