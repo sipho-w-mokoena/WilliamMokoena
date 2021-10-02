@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path")
 
 module.exports = {
   siteMetadata: {
@@ -42,13 +42,13 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          'Assets': path.resolve(__dirname, 'src/assets'),
-          'Components': path.resolve(__dirname, 'src/components'),
-          'Lib': path.resolve(__dirname, 'src/lib'),
-          'Pages': path.resolve(__dirname, 'src/pages')
+          Assets: path.resolve(__dirname, "src/assets"),
+          Components: path.resolve(__dirname, "src/components"),
+          Lib: path.resolve(__dirname, "src/lib"),
+          Pages: path.resolve(__dirname, "src/pages"),
         },
-        extensions: []
-      }
-    }
+        extensions: [],
+      },
+    },
   ],
 }

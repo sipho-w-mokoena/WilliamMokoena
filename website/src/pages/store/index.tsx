@@ -1,14 +1,13 @@
 import Layout from "Components/Layout"
-import Seo from "Components/SEO"
 
 // @ts-ignore: Unreachable code error
-import PageNotFoundSvg from "Assets/images/illustrations/Page_not_found.svg"
+import ShoppingSvg from "Assets/images/illustrations/Shopping.svg"
 
 import classNames from "Lib/utils/classNames"
 
-const NotFoundPage = () => (
-  <Layout>
-    <Seo title="404: Not found" />
+export default function StorePage() {
+  return (
+    <Layout>
     <section className={
       classNames(
         "h-full mx-5",
@@ -19,11 +18,10 @@ const NotFoundPage = () => (
             classNames(
               "lg:w-96 md:w-96 sm:w-64 self-center"
             )}>
-          <img src={PageNotFoundSvg} />
+          <img src={ShoppingSvg} />
           </div>
-          <h1 className={"self-center text-lg font-medium"}>Page Not Found</h1>
+          <h1 className={"self-center text-lg font-medium"}>Welcome to My Store Page 🛍️</h1>
     </section>
-  </Layout>
-)
-
-export default NotFoundPage
+    </Layout>
+  )
+}

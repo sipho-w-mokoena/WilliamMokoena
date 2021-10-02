@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "gatsby-cli": "^3.14.0"
-  },
-  "devDependencies": {
-    "@types/react-helmet": "^6.1.2"
-  }
-}

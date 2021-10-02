@@ -1,9 +1,7 @@
-import Header from "Components/Header"
+import HomePage from "Pages/home"
 
 const IndexPage = () => (
-  <>
-    <Header/>
-  </>
+  <HomePage />
 )
 
 export default IndexPage
