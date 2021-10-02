@@ -1,4 +1,5 @@
 import Layout from "Components/Layout"
+import Seo from "Components/SEO"
 
 // @ts-ignore: Unreachable code error
 import AboutMeSvg from "Assets/images/illustrations/About_me.svg"
@@ -8,6 +9,7 @@ import classNames from "Lib/utils/classNames"
 export default function AboutPage() {
   return (
     <Layout>
+    <Seo title="About Me" />
     <section className={
       classNames(
         "h-full mx-5",

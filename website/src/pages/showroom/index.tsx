@@ -1,4 +1,5 @@
 import Layout from "Components/Layout"
+import Seo from "Components/SEO"
 
 // @ts-ignore: Unreachable code error
 import ProductTourSvg from "Assets/images/illustrations/Product_tour.svg"
@@ -8,6 +9,7 @@ import classNames from "Lib/utils/classNames"
 export default function ShowroomPage() {
   return (
     <Layout>
+    <Seo title="Showroom" />
     <section className={
       classNames(
         "h-full mx-5",

@@ -1,4 +1,5 @@
 import Layout from "Components/Layout"
+import Seo from "Components/SEO"
 
 // @ts-ignore: Unreachable code error
 import DevelopingIllustration from "Assets/images/illustrations/developing.svg"
@@ -8,6 +9,7 @@ import classNames from "Lib/utils/classNames"
 export default function HomePage() {
   return (
     <Layout>
+      <Seo title={"William Mokoena"}/>
       <section className={
         classNames(
           "h-full mx-5",

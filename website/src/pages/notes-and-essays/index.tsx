@@ -1,4 +1,5 @@
 import Layout from "Components/Layout"
+import Seo from "Components/SEO"
 
 // @ts-ignore: Unreachable code error
 import NotebookSvg from "Assets/images/illustrations/Notebook.svg"
@@ -8,6 +9,7 @@ import classNames from "Lib/utils/classNames"
 export default function NotesAndEssaysPage() {
   return (
     <Layout>
+    <Seo title={"Notes & Essays"} />
     <section className={
       classNames(
         "h-full mx-5",
