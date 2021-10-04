@@ -3,9 +3,10 @@ const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `William Mokoena`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    description: `Hi I'm Sipho William Mokoena an aspiring polymath, \
+    a writer, software developer, ametuer engineer, scientist and researcher.`,
+    author:  `@williammokoena`,
+    siteUrl: `https://www.williammokoena.com/`,
   },
   plugins: [
     `gatsby-plugin-sass`,

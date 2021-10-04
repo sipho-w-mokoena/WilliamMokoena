@@ -9,18 +9,19 @@ library.add(fab)
 
 function RenderSocials(props: { socials: T_Socials[] }) {
   return (
-    <ul className="w-max rounded-sm flex flex-col bg-gray-50">
+    <ul className="w-max rounded-sm flex flex-col gap-2 bg-gray-50">
       {props.socials.map((social, index) => (
         <li key={index} className="p-2">
           <button
             className={classNames(
               "w-8",
               "rounded-full",
+              "text-lg md:text-2xl",
               "text-gray-700 hover:text-green-400 focus:text-green-600",
               "ring-offset-2 focus:ring-2 focus:ring-green-400"
             )}
           >
-            <FontAwesomeIcon icon={["fab", social.siteName]} />
+            <FontAwesomeIcon size="lg" icon={["fab", social.siteName]} />
           </button>
         </li>
       ))}
@@ -32,8 +33,8 @@ export default function Socials(props: { socials: T_Socials[] }) {
   return (
     <div
       className={classNames(
-        "absolute right-2 h-full",
-        "flex flex-col justify-center"
+        "fixed right-1 h-full",
+        "grid items-center"
       )}
     >
       {RenderSocials(props)}
