@@ -6,8 +6,28 @@ import { T_Socials } from "Lib/types/socialMedia"
 
 const socialMedia: T_Socials[] = [
   {
+    siteName: "linkedin",
+    url: "https://www.linkedin.com/in/sipho-mokoena-6169b5209/",
+  },
+  {
     siteName: "github",
     url: "https://github.com/WilliamMokoena",
+  },
+  {
+    siteName: "youtube",
+    url: "https://www.youtube.com/channel/UCH7YuL9wVHPiDfSUMByGMKw",
+  },
+  {
+    siteName: "twitter",
+    url: "",
+  },
+  {
+    siteName: "pinterest",
+    url: "",
+  },
+  {
+    siteName: "medium",
+    url: "https://medium.com/@WilliamMokoena",
   },
 ]
 
