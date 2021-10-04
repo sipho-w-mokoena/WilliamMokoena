@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `William Mokoena`,
     description: `Hi I'm Sipho William Mokoena an aspiring polymath, \
-    a writer, software developer, ametuer engineer, scientist and researcher.`,
+    a writer, software developer, amateur engineer, scientist and researcher.`,
     author:  `@williammokoena`,
     siteUrl: `https://www.williammokoena.com/`,
   },
