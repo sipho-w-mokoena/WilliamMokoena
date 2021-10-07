@@ -17,8 +17,13 @@ function RenderSocials(props: { socials: T_Socials[] }) {
               "w-8",
               "rounded-full",
               "text-lg md:text-2xl",
+<<<<<<< HEAD
               "text-gray-700 hover:text-green-400 focus:text-green-600",
               "ring-offset-2 focus:ring-2 focus:ring-green-400"
+=======
+              "text-gray-700 hover:text-blue-400 focus:text-blue-600",
+              "ring-offset-2 focus:ring-2 focus:ring-blue-400"
+>>>>>>> deploy
             )}
           >
             <FontAwesomeIcon size="lg" icon={["fab", social.siteName]} />
