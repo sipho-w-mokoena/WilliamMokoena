@@ -88,7 +88,7 @@ export default function Header() {
 
   return (
     <div className="sticky max-w-screen-2xl top-0 mb-10 p-5 bg-gray-50 shadow-sm">
-      <nav className="top-0 flex flex-row justify-between">
+      <nav className="top-0 flex flex-row justify-between font-opensans">
         <div className="px-3 cursor-pointer grid grid-rows-1 grid-cols-1">
           <h1 className="font-inter font-light text-2xl tracking-wider">
             SW <span className={
