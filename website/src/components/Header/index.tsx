@@ -46,15 +46,14 @@ function Tabs(props: { tabs: I_Tabs[] }) {
               className={({ selected }) =>
                 classNames(
                   "text-left p-1 h-full",
-                  "hover:text-green-400",
-                  "focus:text-green-600",
+                  "hover:text-blue-400",
+                  "focus:text-blue-600",
                   "uppercase font-medium",
-                  "rounded-md",
                   "focus:outline-none",
                   "focus:ring-1 ring-offset-2",
-                  "ring-offset-green-400",
-                  "ring-green-400",
-                  selected ? "text-green-600" : "hover:text-green-400"
+                  "ring-offset-blue-400",
+                  "ring-blue-400",
+                  selected ? "text-blue-600" : "hover:text-blue-400"
                 )
               }
             >
@@ -90,17 +89,23 @@ export default function Header() {
   return (
     <div className="sticky max-w-screen-2xl top-0 mb-10 p-5 bg-gray-50 shadow-sm">
       <nav className="top-0 flex flex-row justify-between">
-        <div className="px-3 cursor-pointer">
-          <img className="h-7" src={Logo} />
+        <div className="px-3 cursor-pointer grid grid-rows-1 grid-cols-1">
+          <h1 className="font-inter font-light text-2xl tracking-wider">
+            SW <span className={
+                classNames(
+                  "font-semibold"
+                )
+              }>Mokoena</span>
+          </h1>
         </div>
         <button
           className={classNames(
-            "md:hidden rounded-md p-1",
+            "md:hidden p-1",
             "text-gray-600",
-            "hover:text-green-400",
-            "focus:text-green-60",
+            "hover:text-blue-400",
+            "focus:text-blue-60",
             "focus:outline-none",
-            "focus:ring-1 ring-offset-2 ring-offset-green-400 ring-green-400"
+            "focus:ring-1 ring-offset-2 ring-offset-blue-400 ring-blue-400"
           )}
         >
           <FontAwesomeIcon icon={faBars} />
